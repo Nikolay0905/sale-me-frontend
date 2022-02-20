@@ -1,12 +1,30 @@
 import { createTheme } from "@material-ui/core/styles";
+import "typeface-roboto";
 
 const theme = createTheme({
+	overrides: {
+		MuiButton: {
+			contained: {
+				color: "white",
+				fontFamily: "Noto-Sans-Bold",
+				background: "#008394",
+			},
+			outlinedPrimary: {
+				borderColor: "#0000001F",
+				fontFamily: "Noto-Sans-Bold",
+			},
+		},
+	},
 	palette: {
 		primary: {
 			main: "#002f34",
+			light: "#008394",
+			dark: "#002024",
+			contrastText: "#fff",
 		},
 	},
 	typography: {
+		fontFamily: "monospace",
 		h1: {
 			fontSize: 48,
 		},
